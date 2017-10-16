@@ -3,27 +3,33 @@
   <head>
     <meta  charset="utf-8">
     <title> Alhoa Apparel CO </title>
-    <meta name="" content="">
+    <meta name="viewport" content="width=device-width, initial-scale-1">
     <link type="text/css" rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.min.css">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="https://use.fontawesome.com/e053a27a1d.js"></script>
   </head>
   <body>
 <div id="nav">
   <img class="aloha" src="Pictures/aloha-logo.svg" alt="Aloha Apparel">
+    <img class="shoppingcart" src="Pictures/cart-icon.svg" alt="shopping cart">
   <div class="nav-bar">
-    <h4 class="nav-item"><a href="about.html"> About </a> </h4>
-    <h4 class="nav-item"><a href="shop.html"> Shop </a> </h4>
-    <h4 class="nav-item"><a href="featured.html"> Featured </a> </h4>
-    <h4 class="nav-item"><a href="updates.html"> Updates </a></h4>
+    <h4 class="nav-item"><a href=#footer> About </a> </h4>
+    <h4 class="nav-item"><a href="#main"> Shop </a> </h4>
+    <h4 class="nav-item"><a href="#category"> Featured </a> </h4>
+    <h4 class="nav-item"><a href="#signup"> Updates </a></h4>
   </div>
-  <img class="shoppingcart" src="Pictures/cart-icon.svg" alt="shopping cart">
+
 </div>
 <section class="banner">
   <div class="collection">
 <h3> New collection</h3>
-<h1>  Spring/Summer 2016 </h1>
+<h1>  Spring/Summer  <span class="year"> 2016 </span> </h1>
+
 </div>
 </section>
 <section class="clothing">
@@ -40,27 +46,49 @@
 <div  class="women"> <h2> Women's </h2> </div>
 </section>
 <h1 class="product"><em>Most-Loved</em> <strong>Products</strong> </h1>
-<main>
-  <div class="checkeddress"> <img src='Pictures/checked-stretch-dress.jpg' alt='Checked Dress'>
+<main id="main">
+  <ul class="bxslider">
+  <li><div class="checkeddress"> <img src='Pictures/checked-stretch-dress.jpg' alt='Checked Dress'>
   <h6 class="title"> Dresses </h6>
   <h5> Checked Stretch Dress</h5>
   <h6 class="price"> $129.00 </h6>
-  </div>
-  <div class="backpack"> <img src='Pictures/blue-hipster-backpack.jpg' alt='Blue Backpack'>
+</div></li>
+  <li><div class="backpack"> <img src='Pictures/blue-hipster-backpack.jpg' alt='Blue Backpack'>
  <h6 class="title"> Bags </h6>
  <h5> Blue Hipster Backpack </h5>
  <h6 class="price"> $69.00 </h6>
-  </div>
-  <div class="overalls"> <img src='Pictures/demin-overall-shorts.jpg' alt='Denim Overall Shorts'>
+  </div></li>
+<li>  <div class="overalls"> <img src='Pictures/demin-overall-shorts.jpg' alt='Denim Overall Shorts'>
   <h6 class="title"> Demin </h6>
   <h5> Demin Overall Shorts </h5>
   <h6 class="price"> $89.00 </h6>
-   </div>
-  <div class="pinkdress"> <img src='Pictures/pink-dotted-dress.jpg' alt='Dotted Dress'>
+</div></li>
+<li>  <div class="pinkdress"> <img src='Pictures/pink-dotted-dress.jpg' alt='Dotted Dress'>
  <h6 class="title"> Dresses </h6>
  <h5> Pink Dotted Dress </h5>
  <h6 class="price"> $99.00</h6>
-  </div>
+  </div></li>
+  <li><div class="bluedress"> <img src='Pictures/blue-silk-dress.jpg' alt='Blue Dress'>
+ <h6 class="title"> Dresses  </h6>
+ <h5> Blue Silk Dress </h5>
+ <h6 class="price"> $119.00 </h6>
+  </div></li>
+  <li><div class="backpack"> <img src='Pictures/cotton-blue-shirt.jpg' alt='Blue Shirt'>
+ <h6 class="title"> Shirt </h6>
+ <h5> Blue Cotton Shirt </h5>
+ <h6 class="price"> $99.00 </h6>
+  </div></li>
+  <li><div class="backpack"> <img src='Pictures/stretch-knit-dress.jpg' alt='Knit Dress'>
+ <h6 class="title"> Dresses </h6>
+ <h5> Stretch Knit Dress </h5>
+ <h6 class="price"> $109.00 </h6>
+  </div></li>
+  <li><div class="backpack"> <img src='Pictures/cotton-yellow-tshirt.jpg' alt='Yello T-Shirt'>
+ <h6 class="title"> Shirt </h6>
+ <h5> Yellow Cotton T-Shirt </h5>
+ <h6 class="price"> $59.00 </h6>
+  </div></li>
+  </ul>
 </main>
 <section id="signup">
 <h1><i>Sign-up for</i> <strong>Updates</strong> </h1>
@@ -68,33 +96,34 @@
 upcoming sales, and get free style tips from our blog. Unsibscribe at any time. </p>
   <form class="updates">
     <div>
-      <input type="text" id=email placeholder="Your Email">
+      <input id="subscribe" type="text" id=email placeholder="Your Email">
       <button type="subscribe"> Subscribe </button>
     </div>
 </form>
 </section>
-<footer>
+<footer id="footer">
   <div class="info">
 <p>@2016 Aloha Apparel Co. <br /> powered ny HTML and CSS. <br /> <br />
 604-604-6040. <span class="email"> info@alohaaparel.com </span> <br /> <br /> <span class="address"> 1490 W Broadway <br /> Vancouver, BC, Canada</p> </span>
 </div>
 <div class="social">
   <ul>
- <i class="fa fa-facebook" aria-hidden="true"> Facebook </i>
+ <li class="facebook"> <span>Facebook</span></li>
  <br />
  <br />
- <i class="fa fa-twitter" aria-hidden="true"> Twitter </i>
+ <li class="twitter"> <span>Twitter</span>  </li>
  <br />
  <br />
- <i class="fa fa-instagram" aria-hidden="true"> Instagram </i>
+ <li class="insta"> <span>Instagram</span> </li>
  <br />
  <br />
- <i class="fa fa-pinterest" aria-hidden="true"> Pintrest </i>
+ <li class="pintrest"> <span>Pintrest</span> </li>
  <br />
  <br />
- <i class="fa fa-google-plus" aria-hidden="true"> Google+ </i>
+ <li class="google"> <span>Google+</span></li>
   </ul>
 </div>
 </footer>
+<script type=text/javascript src="script.js"> </script>
   </body>
 </html>

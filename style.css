@@ -30,12 +30,34 @@
     font-weight: normal;
     font-style: normal;
 }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, center,
+dl, dt, dd, ol, li,
+fieldset, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+body {
+  width: 100%;
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: "playfair_displayregular", serif;
+  font-size: 1.3rem;
 }
 p {
   font-family: "raleway", sans-serif;
-  font-size: 16px;
 }
 a {
   text-decoration: none;
@@ -46,10 +68,10 @@ a:hover {
 }
 em {
   color: #242424;
-    padding-right: .3em;
 }
-i {
+em, strong, i{
   padding-right: .3em;
+  font-size: 1.8rem;
 }
 strong {
 }
@@ -57,34 +79,99 @@ strong {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 2%;
+  margin-bottom: 5%;
 }
 .nav-bar {
 color: #e2574c;
 display: flex;
 flex-direction: row;
-padding-top: 2%;
-padding-right: 1%;
+padding-right: 5%;
+padding-top: 17%;
+order: 2;
 }
 .nav-item {
-font-size: 20px;
+font-size: .6rem;
 margin-right: 5%;
 text-transform: uppercase;
 }
 .aloha {
-  height: 18%;
-  padding: 3% 0 0 2%;
-  width: 12%;
+  height: 13%;
+  padding: 3% 0 0 10%;
+  width: 24%;
+  order: 1;
 }
 .shoppingcart {
-  height: 7%;
-  padding: 2% 2% 0 0;
-  width: 6%;
+  height: 9%;
+  padding: 2% 10% 0 0;
+  width: 12%;
+  order: 3;
 }
-@media only screen and (min-width: 360px) {
+@media only screen and (min-width: 320px) {
     #nav {
       width: 100%;
     }
+}
+@media only screen and (min-width:600px) {
+  p {
+    font-size: 1.5rem;
+      font-family: "raleway", sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "playfair_displayregular", serif;
+    font-size: 1.5rem;
+  }
+  #nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .nav-item {
+    font-size: 1.3rem;
+  }
+  .nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+  }
+  .aloha {
+    height: 18%;
+    padding: 3% 0 2% 2%;
+    width: 12%;
+  }
+  .shoppingcart {
+    height: 7%;
+    padding: 2% 2% 0 0;
+    width: 6%;
+  }
+}
+@media only screen and (min-width:1200px) {
+  #nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+  .nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+  }
+  .nav-item {
+    font-size: 1.3rem;
+    }
+  .aloha {
+    height: 18%;
+    padding: 3% 0 2% 2%;
+    width: 12%;
+  }
+  .shoppingcart {
+    height: 7%;
+    padding: 2% 2% 0 0;
+    width: 6%;
+  }
 }
 .banner {
   background-image: url(Pictures/banner-girl.png), url(Pictures/flower-bkgd.jpg);
@@ -96,37 +183,66 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 text-align: center;
+height: 20rem;
+padding-bottom: 10%;
 }
 .collection {
-color: white;
-padding-top: 1%;
+color: #ffffff;
+padding-top: 17%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 .collection h3 {
 text-transform: uppercase;
+padding-bottom: 3%;
+font-size: .5rem;
 }
 .collection h1 {
-  font-size: 30px;
+  font-size: 1rem;
 }
-@media only screen and (min-width: 360px) {
+.year {
+  padding-left: 2%;
+}
+@media only screen and (min-width: 320px) {
   .banner {
     width:100%;
-    height: 30em;
+    height: 10em;
   }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 600px) {
     .banner {
-        background-size: 14%, 100%;
+        background-size: 13%, 100%;
             margin-bottom: 1%;
+            height: 15rem;
+    }
+    .collection h1 {
+      display: flex;
+      flex-direction: row;
+
     }
 }
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1200px) {
     .banner {
-        background-size: 11%, 100%;
+        background-size: 10%, 100%;
             margin-bottom: 1%;
+            height: 20rem;
+
+    }
+    .collection {
+      padding-top: 9%;
+    }
+    .collection h3 {
+        font-size: 1.2rem;
+    }
+    .collection h1 {
+      font-size: 1.8rem;
     }
 }
 .clothing {
   text-align: center;
+  margin: 10% 0;
 }
 #category {
  display: flex;
@@ -135,7 +251,7 @@ text-transform: uppercase;
  flex-wrap: wrap;
 height: 700px;
 text-transform: uppercase;
-font-size: 1.2rem;
+font-size: 1rem;
 }
 #category div {
   display: flex;
@@ -149,27 +265,53 @@ font-size: 1.2rem;
 background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(Pictures/mens-category.jpg);
 width:100%;
 margin-bottom: 1.5%;
+margin-right: 1%;
+}
+ .men:hover {
+  background-color: #000;
+  opacity: 0.5;
 }
 .trend {
 background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(Pictures/trends-category.jpg);
 width: 49%;
 }
+.trend:hover {
+  background-color: #000;
+  opacity: 0.5;
+}
 .glasses {
 background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(Pictures/glasses-category.jpg);
 width: 49%;
+}
+.glasses:hover {
+  background-color: #000;
+  opacity: 0.5;
 }
 .sale {
 background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(Pictures/sale-category.jpg);
 width: 49%;
 }
+.sale:hover {
+  background-color: #000;
+  opacity: 0.5;
+}
 .bag {
 background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(Pictures/bags-category.jpg);
 width: 49%;
+}
+.bag:hover {
+  background-color: #000;
+  opacity: 0.5;
 }
 .women {
 background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(Pictures/womens-category.jpg);
 width: 100%;
 margin-top: 1.5%;
+margin-right: 1%;
+}
+.women:hover {
+  background-color: #000;
+  opacity: 0.5;
 }
 .trend, .sale {
   margin-right: 1.5%;
@@ -177,16 +319,21 @@ margin-top: 1.5%;
 .trend, .glasses {
   margin-bottom: 1.5%;
 }
-@media only screen and (min-width:360px) {
+@media only screen and (min-width:320px) {
   #category {
     width:100%;
     height: 800px;
     background-size: contain;
   }
+  .men, .women {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 @media only screen and (min-width:600px) {
   #category {
     height: 400px;
+    font-size: 1.3rem;
   }
   .men, .women {
     width: 49.5%;
@@ -210,8 +357,11 @@ margin-top: 1.5%;
   .trend {
     margin-right: 0;
   }
+  .clothing {
+    margin: 5% 0;
+  }
 }
-@media only screen and (min-width:1000px) {
+@media only screen and (min-width:1200px) {
   #category {
     height: 700px;
   }
@@ -239,16 +389,27 @@ margin-top: 1.5%;
   }
 }
 .product {
+  margin-top: 5%;
   text-align: center;
+  font-size: 1.7rem;
 }
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+border: none;
+}
+main .bx-wrapper {
+  -webkit-box-shadow: none;
+    box-shadow: none;
+}
+main .bx-wrapper .bx-controls-auto, main .bx-wrapper .bx-pager {
+  bottom: -50px;
 }
 .checkeddress, .backpack, .overalls, .pinkdress {
-  width: 49%;
+  width: 100%;
+
 }
 main img {
   width: 100%;
@@ -256,10 +417,11 @@ main img {
 h5 {
   color: #e2574c;
 font-size: 1.5rem;
+padding: 5% 0;
 }
 .price {
   font-family: "playfair_displayregular", serif;
-   font-size: 1.2rem;
+   font-size: 1.3rem;
      color: #969696;
 }
 .title {
@@ -268,29 +430,45 @@ font-size: 1.5rem;
  font-size: 1rem;
    color: #969696;
 }
-@media only screen and (min-width:360px) {
-           main { width:100%;
 
-         }
-        main div {
-          width: 25%;
-        }
-}
 @media only screen and (min-width:600px) {
-  main {
-      display: inline-block;
+  main ul{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
   }
   main div {
    display: inline-block;
-    width: 50%;
    }
-  }
-  @media only screen and (min-width:1000px) {
+   .checkeddress, .backpack, .overalls, .pinkdress {
+     width: 100%;
+   }
+   main .bx-wrapper .bx-controls-auto, main .bx-wrapper .bx-pager {
+     position: static;
+   }
+main .bx-wrapper .bx-pager {
+  padding-top: 60px;
+}
+ }
+  @media only screen and (min-width:1200px) {
     main {
       display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+  }
+  main img {
+    width: 100%;
+  }
+  h5 {
+    font-size: 1.6rem;
+  }
+  .title {
+   font-size: 1.3rem;
+  }
+  .price {
+   font-size: 1.5rem;
   }
 }
 #signup {
@@ -301,14 +479,17 @@ font-size: 1.5rem;
   background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(Pictures/wave-bkgd.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 400px;
+  height: 300px;
   text-align: center;
   color: #ffffff;
   margin-bottom: 1%;
 }
+#signup, h1 {
+  margin-bottom: 2%;
+}
 .updates div {
   background-color: #ffffff;
-margin: 0 auto;
+margin-top: 5%;
 border-radius: 16px;
   height: 2.3em;
 }
@@ -324,7 +505,7 @@ input, button {
 input {
   border: none;
   flex-grow: 2;
-    width: 15em;
+    width: 13em;
     padding-left: 1em;
     border-radius: 15px;
 }
@@ -334,7 +515,7 @@ input:focus {
 button {
   background-color: #e2574c;
   color: #ffffff;
-  width: 8em;
+  width: 6em;
   border: 0;
   margin: .3em;
 }
@@ -345,7 +526,110 @@ button:hover {
 footer {
   background-color: #242424;
   color: #ffffff;
+  font-size: .7rem;
+}
+footer p {
+  font-size: .6rem;
+}
+.info {
   display: flex;
-  justify-content: space-between;
-  padding: 5%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 10%;
+}
+.email {
+  text-decoration: underline;
+}
+.address {
+  color: #969696;
+}
+.social ul {
+  display: flex;
+  flex-direction: row;
+  padding: 5% 0;
+  margin-left: 40%;
+  list-style: none;
+}
+.social span {
+  display: none;
+}
+li.facebook::before {
+  content: "\f09a";
+  color: white;
+  font-family: fontawesome;
+  padding-right: 1em;
+}
+li.twitter::before {
+  content: "\f099";
+  color: white;
+  font-family: fontawesome;
+    padding-right: 1em;
+}
+li.insta::before {
+  content: "\f16d";
+  color: white;
+  font-family: fontawesome;
+    padding-right: 1em;
+}
+li.pintrest::before {
+  content: "\f231";
+  color: white;
+  font-family: fontawesome;
+      padding-right: 1em;
+}
+li.google::before {
+  content: "\f0d5";
+  color: white;
+  font-family: fontawesome;
+    padding-right: 1em;
+}
+@media only screen and (min-width:600px) {
+  input {
+    width: 17em;
+  }
+  footer {
+    font-size: .8rem;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer p {
+    font-size: 1rem;
+    margin-bottom: 3%;
+  }
+  .info {
+    margin: 0 0 5% 5%;
+  }
+  .social ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 8rem;
+    padding-top: 3rem;
+    margin: 0;
+    list-style: none;
+  }
+  .social span {
+    display: inline;
+  }
+  #signup {
+    height: 500px;
+  }
+  #signup h1 {
+    margin-bottom: 1%;
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width:1200px) {
+  .social ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 15rem;
+    padding-top: 7rem;
+    margin: 0;
+    list-style: none;
+  }
 }
